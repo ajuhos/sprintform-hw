@@ -1,0 +1,23 @@
+{
+  "name": "sprintform-hw-api",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node ./dist/index.js",
+    "seed": "node ./dist/seed.js",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^8.2.0",
+    "@tsconfig/node20": "^20.1.2",
+    "@types/cors": "^2.8.16",
+    "api-core": "^3.1.0",
+    "api-core-mapper": "^3.1.1",
+    "api-model-mongoose": "^3.1.0",
+    "api-provider": "^3.1.0",
+    "api-provider-express": "^3.1.1",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mongoose": "^8.0.0"
+  }
+}
