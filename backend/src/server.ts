@@ -22,6 +22,16 @@ export class Server {
 
         const app = express();
         app.use(cors());
+        app.use((req: any, res: any, next: any) => {
+            res.header('Access-Control-Expose-Headers', 'X-Total-Count');
+
+            //Disable cache
+            res.header('Cache-Control', 'private, no-cache, no-store, must-revalidate');
+            res.header('Expires', '-1');
+            res.header('Pragma', 'no-cache');
+
+            next()
+        });
         app.use(bodyParser.json());
 
         const mapper: ApiSwaggerProvider = await API.provide(ApiSwaggerProvider);
