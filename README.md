@@ -61,8 +61,9 @@ Schema files are available at the following endpoints:
 
 To run locally, you will need the following environment:
 - Node.js 20.9.0 (LTS)
-- Typescript 5.x
+- Typescript 5.x (installed globally)
 - MongoDB 7.x
+- Yarn (or NPM)
 
 ### Frontend
 
