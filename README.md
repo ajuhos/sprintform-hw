@@ -39,6 +39,23 @@ The backend is a Node.js server application powered by the API Core framework. I
 - `api-provider` - For connecting the modules together
 - `api-core` - For handling API queries and responses
 
+The backend supports the following endpoints:
+- `GET /transactions` - Returns a list of transactions
+- `GET /transactions/{id}` - Returns a single transaction
+- `GET /transactions/totals-by-date` - Returns monthly spending statistics
+- `GET /transactions/totals-by-category?year={year}&month={month}` - Returns category breakdown statistics (year and month are optional)
+- `POST /transactions` - Creates a new transaction
+- `PUT /transactions/{id}` - Replaces an existing transaction
+- `PATCH /transactions/{id}` - Updates an existing transaction
+- `DELETE /transactions/{id}` - Deletes an existing transaction
+
+For more information about filtering, pagination and sorting, consult the [API Core documentation](https://github.com/ajuhos/api-core/wiki/High-level-access-(REST-API)).
+
+Schema files are available at the following endpoints:
+- `/swagger.json` - Swagger 2.0 schema
+- `/openapi.json` - OpenAPI 3.0 schema
+- `/.api-core` - API Core schema
+
 ## Local setup
 
 To run locally, you will need the following environment:
