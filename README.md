@@ -2,6 +2,9 @@
 
 ## Overview
 
+<img src="media/transactions.png" alt="drawing" width="400"/>
+<img src="media/insights.png" alt="drawing" width="400"/>
+
 This is a simple web application for managing the finances of Sprintform.
 
 Supported features:
