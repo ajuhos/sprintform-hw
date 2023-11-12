@@ -20,6 +20,7 @@ export interface TransactionFilter {
 
 export async function fetchTransactions(filter: TransactionFilter, page: number): Promise<PaginatedQueryResult<Transaction>> {
     const params = new URLSearchParams();
+    params.append('sort', '-paid');
     params.append('limit', PAGE_SIZE);
     params.append('page', '' + page);
 
