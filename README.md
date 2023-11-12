@@ -11,7 +11,7 @@ To run locally, you will need the following environment:
 
 Create the `.env.local` file in the `frontend` director:
 ```dotenv
-VITE_API_URL=http://localhost:8080
+VITE_API_URI=http://localhost:8080
 ```
 
 Then install the dependencies and run the development server:
