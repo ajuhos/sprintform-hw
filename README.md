@@ -21,7 +21,7 @@ Hidden technical features:
 - Seed script for generating demo data
 
 Known issues:
-- The insights page and the statistic endpoints don't handle different currencies correctly.
+- The insights page and the statistics endpoints don't handle different currencies correctly.
 - The list page isn't fully optimized for mobile devices.
 - While the backend supports create/edit/delete operations, these are not implemented in the frontend.
 
