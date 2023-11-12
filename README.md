@@ -34,6 +34,12 @@ The application is split into two parts:
 
 The frontend is a single page application that communicates with the backend via a REST API. 
 
+Libraries used:
+- React Router
+- React Query
+- Material UI
+- Recharts
+
 The backend is a Node.js server application powered by the API Core framework. It uses the following API Core modules:
 - `api-provider-express` - For exposing the REST API using Express.js
 - `api-model-mongoose` - For connecting to MongoDB
