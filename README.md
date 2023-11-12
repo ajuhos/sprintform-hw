@@ -24,6 +24,7 @@ Known issues:
 - The insights page and the statistics endpoints don't handle different currencies correctly.
 - The list page isn't fully optimized for mobile devices.
 - While the backend supports create/edit/delete operations, these are not implemented in the frontend.
+- The frontend handles loading states, but doesn't handle errors.
 
 ## Architecture
 
