@@ -10,6 +10,7 @@ import MiscIcon from '@mui/icons-material/ShoppingBag';
 import InsuranceIcon from '@mui/icons-material/Savings';
 import UtilitiesIcon from '@mui/icons-material/ReceiptLong';
 import EntertainmentIcon from '@mui/icons-material/Nightlife';
+import {SvgIconOwnProps} from "@mui/material/SvgIcon/SvgIcon";
 
 const ICONS = {
     [TransactionCategory.housing]: HousingIcon,
@@ -26,7 +27,7 @@ const ICONS = {
 
 const DEFAULT_ICON = MiscIcon;
 
-export const CategoryIcon: React.FC<{ category: TransactionCategory }> = ({ category }) => {
+export const CategoryIcon: React.FC<{ category: TransactionCategory } & SvgIconOwnProps> = ({ category, ...props }) => {
     const Icon = ICONS[category] || DEFAULT_ICON;
-    return <Icon />
+    return <Icon {...props} />
 }
