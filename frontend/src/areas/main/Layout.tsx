@@ -30,7 +30,7 @@ export const Layout: React.FC = () => {
     const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
 
     return (
-        <Box sx={{ flexGrow: 1 }}>
+        <Box sx={t => ({ flexGrow: 1, minHeight: '100vh', backgroundColor: t.palette.background.default })}>
             <AppBar position="static">
                 <Toolbar>
                     <Box sx={{ flexGrow: 1 }}>

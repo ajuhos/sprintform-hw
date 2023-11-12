@@ -1,7 +1,8 @@
 import React, {useEffect} from "react";
 import { useInView } from "react-intersection-observer";
+import { TransitionGroup } from 'react-transition-group';
 import {InfiniteData, UseInfiniteQueryResult} from "@tanstack/react-query";
-import {Box, List} from "@mui/material";
+import {Box, Collapse, List} from "@mui/material";
 import {Loader} from "./";
 import {PaginatedQueryResult, ObjectWithId} from "../"
 
@@ -25,11 +26,15 @@ export const InfiniteListView = <T extends ObjectWithId>({ keyProp = "id", query
 
     return (
         <List>
-            {data.pages.map((page, i) => (
-                <React.Fragment key={i}>
-                    {page.items.map(item => <ItemComponent key={item[keyProp] as string} item={item} />)}
-                </React.Fragment>
-            ))}
+            <TransitionGroup appear={true} enter={true} exit={true}>
+                {data.pages.flatMap((page) =>
+                    page.items.map(item => (
+                        <Collapse key={item[keyProp] as string} unmountOnExit>
+                            <ItemComponent item={item} />
+                        </Collapse>
+                    ))
+                )}
+            </TransitionGroup>
             {hasNextPage && (
                 <Box ref={ref}>
                     {isFetchingNextPage && <Loader />}

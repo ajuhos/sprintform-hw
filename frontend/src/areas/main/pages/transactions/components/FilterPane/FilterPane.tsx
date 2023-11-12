@@ -1,7 +1,8 @@
 import React, {useDeferredValue} from "react";
-import {Box, Paper, Stack, TextField} from "@mui/material";
+import {Box, InputAdornment, Paper, Stack, TextField} from "@mui/material";
 import {SumRangeSelector} from "./elements";
 import {TransactionFilter} from "@main/queries";
+import SearchIcon from '@mui/icons-material/Search';
 
 interface Props {
     originalFilter: TransactionFilter
@@ -19,10 +20,17 @@ export const FilterPane: React.FC<Props> = ({ originalFilter, onChange }) => {
     }, [onChange, deferredSummary, sum])
 
     return (
-        <Paper>
+        <Paper variant="outlined">
             <Box padding={2}>
                 <Stack direction={'row'} spacing={2}>
-                    <TextField label={'Search'} variant={'outlined'} size={"small"}
+                    <TextField aria-label={'Search'} variant={'outlined'} size={"small"}
+                               InputProps={{
+                                   startAdornment: (
+                                       <InputAdornment position="start">
+                                           <SearchIcon />
+                                       </InputAdornment>
+                                   ),
+                               }}
                                value={summary}
                                onChange={e => setSummary(e.target.value)} />
                     <SumRangeSelector value={sum} onChange={setSum} />

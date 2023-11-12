@@ -7,7 +7,7 @@ export const TransactionListItem: React.FC<{ item: Transaction }> = ({ item: { c
     return (
         <ListItem secondaryAction={<strong><CurrencyValue currency={currency} amount={sum} /></strong>}>
             <ListItemAvatar>
-                <Avatar>
+                <Avatar sx={t => ({ backgroundColor: t.palette.primary.light })}>
                     <CategoryIcon category={category} />
                 </Avatar>
             </ListItemAvatar>

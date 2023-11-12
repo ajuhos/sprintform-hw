@@ -14,7 +14,11 @@ export const SprintformMUITheme = createTheme({
             main: '#094346',
         },
         secondary: {
-            main: '#fbae34',
+            main: '#fbae34'
+        },
+        background: {
+            default: '#fbfff2',
+            paper: '#feeac6',
         },
     },
     components: {
