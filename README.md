@@ -18,6 +18,7 @@ Hidden technical features:
 - Responsive design
 - MUI theme customization
 - Transitions
+- Seed script for generating demo data
 
 Known issues:
 - The insights page and the statistic endpoints don't handle different currencies correctly.
@@ -79,10 +80,11 @@ yarn dev
 
 ### Backend
 
-Install the dependencies:
+Install the dependencies and build the server:
 ```bash
 cd backend
 yarn
+yarn build
 ```
 
 Before starting the server for the first time, seed the database with demo data:
