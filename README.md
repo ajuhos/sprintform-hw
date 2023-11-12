@@ -2,8 +2,10 @@
 
 ## Overview
 
-<img src="media/transactions.png" alt="drawing" width="350"/>
-<img src="media/insights.png" alt="drawing" width="350"/>
+<p float="left">
+ <img src="media/transactions.png" alt="drawing" width="400"/>
+ <img src="media/insights.png" alt="drawing" width="400"/>
+</p>
 
 This is a simple web application for managing the finances of Sprintform.
 
