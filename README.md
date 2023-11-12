@@ -9,7 +9,7 @@ To run locally, you will need the following environment:
 
 ### Frontend
 
-Create the `.env.local` file in the `frontend` director:
+Create the `.env.local` file in the `frontend` directory with the following content:
 ```dotenv
 VITE_API_URI=http://localhost:8080
 ```
