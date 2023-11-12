@@ -23,5 +23,11 @@ async function seed() {
 }
 
 seed()
-    .then(() => console.log('Seeding done.'))
-    .catch(e => console.error(e));
+    .then(() => {
+        console.log('Seeding done.');
+        process.exit(0)
+    })
+    .catch(e => {
+        console.error(e);
+        process.exit(1)
+    });
