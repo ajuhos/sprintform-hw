@@ -2,8 +2,8 @@
 
 ## Overview
 
-<img src="media/transactions.png" alt="drawing" width="400"/>
-<img src="media/insights.png" alt="drawing" width="400"/>
+<img src="media/transactions.png" alt="drawing" width="350"/>
+<img src="media/insights.png" alt="drawing" width="350"/>
 
 This is a simple web application for managing the finances of Sprintform.
 
@@ -15,6 +15,7 @@ Hidden technical features:
 - Infinite scrolling
 - Responsive design
 - MUI theme customization
+- Transitions
 
 Known issues:
 - The insights page and the statistic endpoints don't handle different currencies correctly.
